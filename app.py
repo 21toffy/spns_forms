@@ -7,13 +7,13 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-ENV= 'dev'
+ENV= 'prod'
 if ENV =='dev':
 	app.debug =True
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://spns_user:spns_password@localhost/spns_forms'
 else:
 	app.debug =False
-	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://kkfbxznmgwnhfq:7217a1e77182ac11f467a196e1a5ea874ec2b3a76f7b7b4e83665e1d7a5c0cee@ec2-54-237-135-248.compute-1.amazonaws.com:5432/db9d5ld1v5fb0'
+	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://uzochtymrvxwhs:bde5ae7cb313369fc2d36c9c0db9288304e0c62c185ffa2273e43d3cae26aa81@ec2-54-242-120-138.compute-1.amazonaws.com:5432/d2osrhl76cjra3'
 
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] =False
@@ -88,5 +88,5 @@ def delete_download(id):
 
 
 
-if __name__=="__main__":
-	app.run()
+# if __name__=="__main__":
+# 	app.run()
